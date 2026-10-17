@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>โปรไฟล์</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="profile-card">
+        <div class="profile-header">
+          <div class="avatar-wrap">
+            <img id="profilePreview" alt="Profile" src="" />
+          </div>
+          <div class="profile-meta">
+            <h1>ข้อมูลสมาชิก</h1>
+            <p>จัดการข้อมูลส่วนตัวของคุณ</p>
+          </div>
+        </div>
+
+        <div id="serverError" class="alert error" style="display: none;">เกิดข้อผิดพลาดในระบบ</div>
+        <div id="successMessage" class="alert success" style="display: none;">อัปเดตข้อมูลเรียบร้อย!</div>
+
+        <form id="profileForm" novalidate>
+          <div class="field-row">
+            <label>
+              <span>ชื่อ</span>
+              <input name="firstName" type="text" />
+            </label>
+            <label>
+              <span>นามสกุล</span>
+              <input name="lastName" type="text" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              <span>เบอร์โทรศัพท์</span>
+              <input name="phoneNumber" type="tel" />
+            </label>
+            <label>
+              <span>เพศ</span>
+              <select name="gender" aria-label="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="file-field">
+            <span>รูปโปรไฟล์</span>
+            <input id="profileImageInput" type="file" accept="image/*" />
+          </label>
+
+          <div class="actions">
+            <button id="cancelButton" type="button" class="secondary" hidden>ยกเลิก</button>
+            <button type="submit" class="primary">บันทึก</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
